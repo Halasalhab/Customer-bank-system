@@ -1,0 +1,16 @@
+h1 {
+	display: flex;
+	justify-content: center;
+	color: darkred;
+	}
+
+div {
+	margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+body {
+	background-color: #FFF8DC;
+}
+
