@@ -2,8 +2,8 @@ var users=[];
 $("#create-acc").click(function(){
 	window.open("index2.html");
 })
-var sub = document.getElementById("regis");
-sub.addEventListener('click',function(){
+
+$("#regis").click(function(){
 
 	var userName = $("#user-name").val();
 	var userBalance = $("#balance").val();
@@ -27,6 +27,9 @@ $("#login").click(function(){
 	})
 })
 
+/*$("#balance-li").click(function(){
+
+})*/
 function creatAcc(username,balance,password){
 var account={
 username:username,
