@@ -1,44 +1,83 @@
 var users=[];
+$("#create-acc").click(function(){
+	window.open("index2.html");
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function creatAcc(username,balance,password){
 var account={
 username:username,
 balance:balance,
-password:password
+password:password,
+id: generateId();
 transaction:transaction
 };
 users.push(account)
+
+
 }
 
-function transaction(amount){
-var amount=amount;
+function generateId(){
+  this.id = Math.floor(Math.random() * (100000))	
+}
+function transaction(){
+var s = this
+var balance = this.balance;
 return {
-	deposit:function(){
-		this.balance=this.balance+amount;
+	deposit:function(amount){
+		console.log(balance)
+		s.balance = balance+amount;
 	},
-	withdrow:function(){
-		if(amount>this.balance){
+	withdrow:function(amount){
+		if(amount> balance){
 			alert("This operation is not available, Your balance is not enough");
 		}else{
-			this.balance=this.balance-amount;
+		s.balance= balance-amount;
 		}
 
 	},
 	showbalance:function(){
-		return "Your balnce is : "+this.balance;
+		return "Your balnce is : "+ s.balance;
 	}
 }
 }
+
 function maximumAccountBalance(){
-	var balnces=[];
+	var largest = users[0];
 	var accountindex;
 	$.each(users,function(index,value){
-		balnces.push(value["balance"])
+		if(value['balance'] > largest['balance']){
+			largest = value;
+		}
         
 	})
-	var maxi=Math.max(balnces)
-	accountindex=balnces.indexOf(maxi)
-	return users[accountindex];
+	return largest;
 }
 
 
