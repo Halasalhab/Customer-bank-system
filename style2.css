@@ -1,0 +1,14 @@
+h1{
+	color:#191970;
+}
+body{
+	background-color:lavender;
+}
+div{
+	padding:5px 0;
+	text-align: center;
+}
+#note {
+	border: 1px solid navy;
+
+}
