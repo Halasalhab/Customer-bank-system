@@ -29,8 +29,9 @@ $("#regis").click(function(){
 	$(container).text("Your id is: ")
 	$(container).attr("id","note")
     $(container).append(boldId);
-    alert("You registered successfully, Thank you for choosing us")
     $("#id-note").append(container)
+    setTimeout(function(){ alert("You registered successfully, Thank you for choosing us, click ok to move to login page"); }, 5000);
+   
     $("#index2").hide();
     $("#index").show();
 
